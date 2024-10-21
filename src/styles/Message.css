@@ -1,0 +1,46 @@
+.message {
+    background-color: rgba(255, 255, 255, 0.9);
+    border-radius: 10px;
+    padding: 20px;
+    max-width: 400px;
+    margin: auto;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+}
+
+.message h1 {
+    text-align: center;
+    color: #333;
+}
+
+.message label {
+    display: block;
+    margin-bottom: 10px;
+}
+
+.message input,
+.message textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin-bottom: 20px;
+}
+
+.message textarea {
+    height: 100px;
+    /* Adjust the height for the message box */
+}
+
+.send-button {
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    width: 100%;
+}
+
+.send-button:hover {
+    background-color: #45a049;
+}

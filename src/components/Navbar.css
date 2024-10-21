@@ -1,0 +1,251 @@
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 0;
+    /* Adjusted padding for spacing */
+    background-color: black;
+    /* Keep background transparent */
+    position: relative;
+    /* Change from fixed to relative */
+    width: 100%;
+    /* Ensure it spans the full width */
+    z-index: 1000;
+    /* Ensure it is above other content */
+}
+
+.navbar .logo {
+    font-size: 2rem;
+    /* Increase logo size */
+    color: white;
+    /* Change logo color to white */
+    animation: glow 1s ease-in-out infinite alternate;
+    /* Glow effect */
+    text-shadow: 0 0 10px rgba(255, 192, 203, 0.8), 0 0 20px rgba(255, 105, 180, 0.8);
+    /* Rose white shadow */
+    padding-left: 20px;
+    /* Adjust left padding */
+}
+
+/* Navigation Links */
+.nav-links {
+    display: flex;
+    /* Flex layout for links */
+    list-style-type: none;
+    /* Remove list markers */
+    gap: 30px;
+    /* Space between links */
+    margin-left: auto;
+    /* Push the links to the right */
+    transition: transform 0.3s ease;
+    /* Smooth transition for menu */
+}
+
+.nav-links ul {
+    display: flex;
+    /* Display links horizontally */
+    margin: 0;
+    /* Remove default margin */
+    padding: 0;
+    /* Remove default padding */
+    list-style-type: none;
+    /* Remove list markers */
+}
+
+/* Mobile view */
+.nav-links.active {
+    position: fixed;
+    /* Fix links position when active */
+    top: 0;
+    /* Align to top */
+    right: 0;
+    /* Align to right */
+    height: 100vh;
+    /* Full height */
+    width: 100%;
+    /* Full width */
+    background-color: rgba(0, 0, 20, 0.8);
+    /* Semi-transparent background color for mobile menu */
+    transform: translateX(0);
+    /* Slide in */
+}
+
+.nav-links.active ul {
+    flex-direction: column;
+    /* Stack links vertically in menu */
+    padding: 20px;
+    /* Add padding around links */
+}
+
+.nav-links li {
+    margin: 10px 35px;
+    /* Space between links */
+}
+
+.nav-links li a {
+    text-decoration: none;
+    /* Remove underline from links */
+    font-size: 2rem;
+    /* Increased size for mobile menu */
+    color: white;
+    /* Change link color */
+    transition: color 0.3s;
+    /* Smooth transition for hover effect */
+    cursor: pointer;
+}
+
+.nav-links li a:hover {
+    color: rgba(129, 101, 106, 0.8);
+    /* Change color on hover */
+}
+
+/* Hamburger Menu Styles */
+.hamburger {
+    display: none;
+    /* Hidden by default */
+    font-size: 2rem;
+    /* Size of hamburger icon */
+    color: white;
+    /* Color of the icon */
+    cursor: pointer;
+    /* Pointer cursor on hover */
+}
+
+/* Mobile Responsiveness */
+@media (max-width: 768px) {
+    .nav-links {
+        display: none;
+        /* Hide links by default on mobile */
+        transform: translateX(100%);
+        /* Position off-screen */
+    }
+
+    .nav-links.active {
+        display: flex;
+        /* Show links when active */
+        flex-direction: column;
+        /* Stack links vertically */
+    }
+
+    .hamburger {
+        display: block;
+        /* Show hamburger icon on mobile */
+    }
+
+    .nav-links li a {
+        font-size: 2rem;
+        /* Increase text size for mobile menu */
+        cursor: pointer;
+    }
+
+    .navbar .logo {
+        font-size: 1.5rem;
+        /* Adjust logo size for mobile */
+    }
+
+    .nav-links ul {
+        padding: 0;
+        /* Remove padding in mobile view */
+    }
+
+    .close-icon {
+        color: white;
+        /* Color for close icon */
+        font-size: 2rem;
+        /* Size of close icon */
+        margin: 10px;
+        /* Space around close icon */
+        cursor: pointer;
+        /* Pointer cursor */
+        align-self: flex-end;
+        /* Align to the end of the menu */
+    }
+}
+
+/* Animation for the main title */
+@keyframes glow {
+    0% {
+        text-shadow: 0 0 10px rgba(255, 192, 203, 0.8), 0 0 20px rgba(255, 105, 180, 0.8);
+    }
+
+    100% {
+        text-shadow: 0 0 20px rgba(255, 0, 0, 0.8), 0 0 30px rgba(255, 105, 180, 0.8);
+    }
+}
+
+/* Mobile Responsiveness */
+@media (max-width: 768px) {
+    .nav-links {
+        display: none;
+        /* Hide links by default on mobile */
+        transform: translateX(100%);
+        /* Position off-screen */
+        cursor: pointer;
+    }
+
+    .nav-links.active {
+        display: flex;
+        /* Show links when active */
+        flex-direction: column;
+        /* Stack links vertically */
+    }
+
+    .hamburger {
+        display: block;
+        /* Show hamburger icon on mobile */
+    }
+
+    .nav-links li a {
+        font-size: 2rem;
+        /* Increase text size for mobile menu */
+        cursor: pointer;
+    }
+
+    .navbar .logo {
+        font-size: 1.5rem;
+        /* Adjust logo size for mobile */
+    }
+
+    .nav-links ul {
+        padding: 0;
+        /* Remove padding in mobile view */
+    }
+
+    .close-icon {
+        color: white;
+        /* Color for close icon */
+        font-size: 2rem;
+        /* Size of close icon */
+        margin: 10px;
+        /* Space around close icon */
+        cursor: pointer;
+        /* Pointer cursor */
+        align-self: flex-end;
+        /* Align to the end of the menu */
+    }
+}
+
+/* Add styles to ensure the Sign In link matches the others */
+.nav-links li a {
+    text-decoration: none;
+    /* Remove underline from links */
+    font-size: 2rem;
+    /* Increased size for mobile menu */
+    color: white;
+    /* Change link color */
+    transition: color 0.3s;
+    /* Smooth transition for hover effect */
+}
+
+.nav-links li a:hover {
+    color: rgba(129, 101, 106, 0.8);
+    /* Change color on hover */
+}
+
+/* Additional styles for mobile view if needed */
+@media (max-width: 768px) {
+    .nav-links li a {
+        font-size: 2rem;
+        /* Increase text size for mobile menu */
+    }
+}

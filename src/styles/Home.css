@@ -1,0 +1,76 @@
+.home {
+    text-align: center;
+    padding: 50px;
+    min-height: calc(100vh - 100px);
+    /* Adjust height minus Navbar and Footer */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    /* Center content vertically */
+    color: white;
+    /* Default text color */
+    background-size: cover;
+    /* Ensure background covers entire div */
+    background-position: center;
+    /* Center the background image */
+    overflow: hidden;
+    /* Hide overflow */
+}
+
+.main-title {
+    font-size: 3rem;
+    /* Large text size */
+    color: #fff;
+    /* White text color */
+    animation: glow 1s ease-in-out infinite alternate;
+    /* Glow effect */
+    text-shadow: 0 0 10px rgba(255, 192, 203, 0.8), 0 0 20px rgba(255, 105, 180, 0.8);
+    /* Rose white shadow */
+}
+
+.sub-title {
+    font-size: 1.5rem;
+    /* Smaller text size */
+    color: #fff;
+    /* White text color */
+    margin: 10px 0;
+    /* Margin between titles */
+}
+
+.description {
+    font-size: 1.2rem;
+    /* Description text size */
+    color: #f5f5f5;
+    /* Light color for description */
+    text-shadow: 0 0 20px rgba(255, 255, 255, 0.8);
+    /* Glistening effect */
+}
+
+/* Animation for the main title */
+@keyframes glow {
+    0% {
+        text-shadow: 0 0 10px rgba(255, 192, 203, 0.8), 0 0 20px rgba(255, 105, 180, 0.8);
+    }
+
+    100% {
+        text-shadow: 0 0 20px rgba(255, 0, 0, 0.8), 0 0 30px rgba(255, 105, 180, 0.8);
+    }
+}
+
+/* Mobile responsiveness */
+@media (max-width: 768px) {
+    .main-title {
+        font-size: 2.5rem;
+        /* Adjust title size for smaller screens */
+    }
+
+    .sub-title {
+        font-size: 1.2rem;
+        /* Adjust subtitle size for smaller screens */
+    }
+
+    .description {
+        font-size: 1rem;
+        /* Adjust description size for smaller screens */
+    }
+}

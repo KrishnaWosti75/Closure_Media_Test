@@ -1,0 +1,24 @@
+html,
+body {
+  height: 100%;
+  /* Ensure full height */
+  margin: 0;
+  /* Remove default margin */
+}
+
+.app-container {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  /* Minimum height of the app should be full viewport */
+}
+
+.footer {
+  margin-top: auto;
+  /* Push footer to the bottom */
+  padding: 20px;
+  background-color: rgba(0, 0, 0, 0.8);
+  /* Example footer styling */
+  color: white;
+  text-align: center;
+}

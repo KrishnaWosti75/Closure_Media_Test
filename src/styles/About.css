@@ -1,0 +1,190 @@
+.about {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    color: white;
+    text-align: center;
+    padding: 40px;
+    background-size: cover;
+    position: relative;
+
+}
+
+.brand-story {
+    margin-bottom: 40px;
+    position: absolute;
+}
+
+.brand-title {
+    font-size: 2.5rem;
+    font-weight: bold;
+    margin-bottom: 20px;
+    /* Glowing effect with animation */
+    background: linear-gradient(45deg, rgba(255, 255, 255, 0.8), rgba(0, 153, 255, 0.7));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: glowAnimation 1.5s infinite alternate;
+}
+
+@keyframes glowAnimation {
+    0% {
+        text-shadow: 0 0 5px rgba(255, 255, 255, 0.8), 0 0 10px rgba(0, 153, 255, 0.7);
+    }
+
+    100% {
+        text-shadow: 0 0 15px rgba(255, 255, 255, 1), 0 0 30px rgba(0, 153, 255, 1);
+    }
+}
+
+.brand-description {
+    font-size: 1.1rem;
+    line-height: 1.6;
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 0 20px;
+    /* Add padding for better text alignment */
+    /* Add some styling */
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: 8px;
+    padding: 20px;
+}
+
+.contributors {
+    margin-bottom: 20px;
+}
+
+.contributors-title {
+    font-size: 2rem;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.contributors ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.contributors li {
+    font-size: 1rem;
+    margin: 5px 0;
+}
+
+.founder-section {
+    display: flex;
+    align-items: flex-start;
+    /* Align items to the start to prevent content movement */
+    position: relative;
+    flex-direction: row;
+    transition: all 0.3s ease;
+    /* Smooth transition for hover effects */
+    margin-left: -20px;
+    /* Move to left corner */
+}
+
+.founder-image-container {
+    width: 150px;
+    /* Reduced width */
+    height: 150px;
+    /* Reduced height */
+    margin-right: 20px;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.founder-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 10px;
+    z-index: 2;
+}
+
+.founder-text {
+    max-width: 600px;
+    padding: 10px;
+    position: relative;
+    transition: opacity 0.3s;
+    /* Smooth transition for text */
+    opacity: 1;
+    /* Ensure text stays visible */
+}
+
+.founder-title {
+    font-size: 1.8rem;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.founder-message {
+    font-size: 0.9rem;
+    /* Smaller message text */
+    margin: 0;
+    position: relative;
+    line-height: 1.5;
+}
+
+/* Overlay for the entire section */
+.founder-section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.0);
+    z-index: 1;
+    border-radius: 15px;
+    transition: opacity 0.3s;
+}
+
+/* Show overlay on hover */
+.founder-section:hover::before {
+    opacity: 0;
+    /* Hide overlay on hover */
+}
+
+/* Mobile Responsiveness */
+@media (max-width: 768px) {
+    .founder-section {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .founder-image-container {
+        width: 120px;
+        /* Adjust image width for mobile */
+        height: 120px;
+        /* Adjust image height for mobile */
+        margin-bottom: 10px;
+    }
+
+    .brand-title,
+    .contributors-title {
+        font-size: 1.8rem;
+        /* Reduce title size on mobile */
+    }
+
+    .brand-description {
+        font-size: 0.95rem;
+        /* Adjust message size on mobile */
+        max-width: 90%;
+        /* Limit width for text on mobile */
+    }
+
+    .founder-title {
+        font-size: 1.5rem;
+        /* Increase title size on mobile */
+    }
+
+    .founder-message {
+        font-size: 0.9rem;
+        /* Adjust message size on mobile */
+    }
+
+    .about {
+        padding: 20px;
+        /* Adjust padding for smaller screens */
+    }
+}

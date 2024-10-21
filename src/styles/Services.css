@@ -1,0 +1,192 @@
+.services {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    padding: 90px 40px 40px;
+    /* Added top padding */
+    color: white;
+    height: auto;
+    /* Set height to auto to accommodate content */
+    background-image: url('../assets/background.jpg');
+    /* Background image */
+    background-size: cover;
+    /* Cover the entire section */
+    background-position: center;
+    /* Center the background image */
+    position: relative;
+    /* Ensure proper positioning */
+}
+
+.services-title {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    /* Reduced margin for better spacing */
+    text-align: center;
+    /* Center the title */
+}
+
+.services-intro {
+    font-size: 1.2rem;
+    /* Introductory paragraph size */
+    max-width: 800px;
+    /* Limit the width for better readability */
+    text-align: center;
+    /* Center the text */
+    margin-bottom: 40px;
+    /* Space below intro */
+    padding: 0 20px;
+    /* Add padding for smaller screens */
+}
+
+.services-container {
+    display: grid;
+    /* Use grid for layout */
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    /* Create responsive grid */
+    gap: 20px;
+    /* Space between services */
+    width: 100%;
+    max-width: 1200px;
+    /* Limit container width */
+}
+
+.service-box {
+    display: flex;
+    flex-direction: column;
+    /* Stack image and title vertically */
+    align-items: center;
+    background-color: rgba(255, 255, 255, 0.1);
+    /* Semi-transparent background */
+    border-radius: 15px;
+    /* Rounded corners */
+    padding: 20px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+    /* Add some shadow */
+    transition: transform 0.3s;
+    /* Animation for hover effect */
+    text-align: center;
+    /* Center text */
+}
+
+.service-box:hover {
+    transform: scale(1.02);
+    /* Slightly scale on hover */
+}
+
+.service-image-container {
+    width: 100%;
+    /* Full width of container */
+    height: 150px;
+    /* Fixed height for square box */
+    margin-bottom: 10px;
+    /* Space between image and title */
+    overflow: hidden;
+    /* Hide overflow */
+    border-radius: 10px;
+    /* Rounded image */
+}
+
+.service-image {
+    width: 100%;
+    /* Full width of container */
+    height: 100%;
+    /* Full height of container */
+    object-fit: cover;
+    /* Cover image without distortion */
+}
+
+.service-title {
+    font-size: 1.5rem;
+    /* Adjusted title size */
+    margin: 10px 0;
+    /* Added margin for spacing */
+}
+
+/* New styles for service descriptions */
+.service-description {
+    font-size: 1rem;
+    /* Description font size */
+    color: #dcdcdc;
+    /* Light gray color for description */
+    margin: 0;
+    /* Remove margin */
+}
+
+/* Glowing Text Animation */
+.glowing-text {
+    color: #ffffff;
+    /* Base color (white) */
+    text-shadow:
+        0 0 5px #800080,
+        /* Purple glow */
+        0 0 10px #800080,
+        0 0 15px #800080,
+        0 0 20px #ffffff,
+        /* White glow */
+        0 0 30px #ffffff,
+        0 0 40px #ffffff;
+    animation: glow 1.5s infinite alternate;
+    /* Animation */
+}
+
+@keyframes glow {
+    from {
+        text-shadow:
+            0 0 5px #800080,
+            0 0 10px #800080,
+            0 0 15px #800080,
+            0 0 20px #ffffff,
+            0 0 30px #ffffff,
+            0 0 40px #ffffff;
+    }
+
+    to {
+        text-shadow:
+            0 0 10px #800080,
+            0 0 20px #800080,
+            0 0 30px #800080,
+            0 0 40px #ffffff,
+            0 0 50px #ffffff,
+            0 0 60px #ffffff;
+    }
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .services-title {
+        font-size: 2rem;
+        /* Decrease title size on mobile */
+        margin-bottom: 20px;
+        /* Reduce margin on mobile */
+    }
+
+    .services-intro {
+        font-size: 1rem;
+        /* Adjust introductory text size on mobile */
+        margin-bottom: 20px;
+        /* Reduce margin on mobile */
+    }
+
+    .services-container {
+        grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+        /* More flexible columns on mobile */
+        gap: 15px;
+        /* Reduce gap on mobile */
+    }
+
+    .service-title {
+        font-size: 1.2rem;
+        /* Adjusted title size on mobile */
+    }
+
+    .service-image-container {
+        height: 120px;
+        /* Adjusted height for mobile */
+    }
+
+    .service-description {
+        font-size: 0.9rem;
+        /* Smaller description font size on mobile */
+    }
+}
