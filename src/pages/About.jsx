@@ -17,7 +17,7 @@ const About = () => {
     return (
         <div className="about" style={{ backgroundImage: `url(${backgroundImage})` }}>
             <div className="brand-story">
-                <h2 className="brand-title">Our Brand Story</h2>
+                <h2 className="brand-title">About Us:</h2>
                 <p className="brand-description">
                     At our agency, we harness the transformative power of creativity. Our journey began with a bold vision: to challenge the status quo and craft exceptional experiences that leave a lasting impact. We believe that every idea, no matter how humble, can spark significant change.
                 </p>

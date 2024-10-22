@@ -6,16 +6,18 @@
     padding: 90px 40px 40px;
     /* Added top padding */
     color: white;
+    /* Set text color to white */
     height: auto;
     /* Set height to auto to accommodate content */
     background-image: url('../assets/background.jpg');
-    /* Background image */
     background-size: cover;
     /* Cover the entire section */
     background-position: center;
     /* Center the background image */
     position: relative;
     /* Ensure proper positioning */
+    overflow: hidden;
+    /* Disable overflow */
 }
 
 .services-title {
@@ -24,6 +26,8 @@
     /* Reduced margin for better spacing */
     text-align: center;
     /* Center the title */
+    text-decoration: none;
+    /* Ensure no underline */
 }
 
 .services-intro {
@@ -37,13 +41,15 @@
     /* Space below intro */
     padding: 0 20px;
     /* Add padding for smaller screens */
+    text-decoration: none;
+    /* Ensure no underline */
 }
 
 .services-container {
     display: grid;
     /* Use grid for layout */
-    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
-    /* Create responsive grid */
+    grid-template-columns: repeat(5, 1fr);
+    /* Show 5 boxes per row */
     gap: 20px;
     /* Space between services */
     width: 100%;
@@ -101,55 +107,19 @@
     /* Adjusted title size */
     margin: 10px 0;
     /* Added margin for spacing */
+    color: white;
+    /* Ensure title is white */
+    text-decoration: none;
+    /* Ensure no underline */
 }
 
-/* New styles for service descriptions */
-.service-description {
-    font-size: 1rem;
-    /* Description font size */
-    color: #dcdcdc;
-    /* Light gray color for description */
-    margin: 0;
-    /* Remove margin */
-}
-
-/* Glowing Text Animation */
-.glowing-text {
-    color: #ffffff;
-    /* Base color (white) */
-    text-shadow:
-        0 0 5px #800080,
-        /* Purple glow */
-        0 0 10px #800080,
-        0 0 15px #800080,
-        0 0 20px #ffffff,
-        /* White glow */
-        0 0 30px #ffffff,
-        0 0 40px #ffffff;
-    animation: glow 1.5s infinite alternate;
-    /* Animation */
-}
-
-@keyframes glow {
-    from {
-        text-shadow:
-            0 0 5px #800080,
-            0 0 10px #800080,
-            0 0 15px #800080,
-            0 0 20px #ffffff,
-            0 0 30px #ffffff,
-            0 0 40px #ffffff;
-    }
-
-    to {
-        text-shadow:
-            0 0 10px #800080,
-            0 0 20px #800080,
-            0 0 30px #800080,
-            0 0 40px #ffffff,
-            0 0 50px #ffffff,
-            0 0 60px #ffffff;
-    }
+/* Remove underline from links */
+.service-title a,
+.service-description a {
+    text-decoration: none;
+    /* Remove underline from links */
+    color: white;
+    /* Keep links white */
 }
 
 /* Responsive adjustments */

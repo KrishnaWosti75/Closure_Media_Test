@@ -46,7 +46,7 @@ const Navbar = () => {
                                 <li><Link to="/" onClick={toggleMenu}>Home</Link></li>
                                 <li><Link to="/about" onClick={toggleMenu}>About</Link></li>
                                 <li><Link to="/services" onClick={toggleMenu}>Services</Link></li>
-                                <li><a onClick={openModal}>Sign In</a></li> {/* Open modal */}
+                                <li><a onClick={openModal}>Message</a></li> {/* Open modal */}
                             </ul>
                         </div>
                         <div className="hamburger" onClick={toggleMenu}>

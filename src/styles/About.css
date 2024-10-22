@@ -1,16 +1,37 @@
 .about {
+    text-align: center;
+    padding: 50px;
+    min-height: 100vh;
+    /* Full viewport height */
     display: flex;
     flex-direction: column;
-    align-items: center;
     justify-content: center;
-    height: 100vh;
+    align-items: center;
+    /* Center content vertically */
     color: white;
-    text-align: center;
-    padding: 40px;
+    /* Default text color */
     background-size: cover;
+    /* Ensure background covers entire div */
+    background-position: center;
+    /* Center the background image */
+    overflow: hidden;
+    /* Hide overflow */
     position: relative;
-
+    z-index: 1;
+    /* Ensure it's beneath the navbar */
 }
+
+/* Ensure the navbar remains fixed above the .about section */
+.navbar {
+    position: fixed;
+    /* Fix navbar at the top */
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+    /* Ensure it stays above other content */
+}
+
+/* The rest of your styles remain unchanged */
 
 .brand-story {
     margin-bottom: 40px;
@@ -21,13 +42,14 @@
     font-size: 2.5rem;
     font-weight: bold;
     margin-bottom: 20px;
-    /* Glowing effect with animation */
     background: linear-gradient(45deg, rgba(255, 255, 255, 0.8), rgba(0, 153, 255, 0.7));
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
-    animation: glowAnimation 1.5s infinite alternate;
+    /* Removed glowing effect */
+    /* animation: glowAnimation 1.5s infinite alternate; */
 }
 
+/* Removed glowing animation keyframes */
 @keyframes glowAnimation {
     0% {
         text-shadow: 0 0 5px rgba(255, 255, 255, 0.8), 0 0 10px rgba(0, 153, 255, 0.7);
@@ -45,7 +67,6 @@
     margin: 0 auto;
     padding: 0 20px;
     /* Add padding for better text alignment */
-    /* Add some styling */
     background-color: rgba(255, 255, 255, 0.1);
     border-radius: 8px;
     padding: 20px;
@@ -74,20 +95,15 @@
 .founder-section {
     display: flex;
     align-items: flex-start;
-    /* Align items to the start to prevent content movement */
     position: relative;
     flex-direction: row;
     transition: all 0.3s ease;
-    /* Smooth transition for hover effects */
     margin-left: -20px;
-    /* Move to left corner */
 }
 
 .founder-image-container {
     width: 150px;
-    /* Reduced width */
     height: 150px;
-    /* Reduced height */
     margin-right: 20px;
     border-radius: 10px;
     overflow: hidden;
@@ -106,9 +122,7 @@
     padding: 10px;
     position: relative;
     transition: opacity 0.3s;
-    /* Smooth transition for text */
     opacity: 1;
-    /* Ensure text stays visible */
 }
 
 .founder-title {
@@ -119,13 +133,11 @@
 
 .founder-message {
     font-size: 0.9rem;
-    /* Smaller message text */
     margin: 0;
     position: relative;
     line-height: 1.5;
 }
 
-/* Overlay for the entire section */
 .founder-section::before {
     content: '';
     position: absolute;
@@ -139,13 +151,10 @@
     transition: opacity 0.3s;
 }
 
-/* Show overlay on hover */
 .founder-section:hover::before {
     opacity: 0;
-    /* Hide overlay on hover */
 }
 
-/* Mobile Responsiveness */
 @media (max-width: 768px) {
     .founder-section {
         flex-direction: column;
@@ -154,37 +163,29 @@
 
     .founder-image-container {
         width: 120px;
-        /* Adjust image width for mobile */
         height: 120px;
-        /* Adjust image height for mobile */
         margin-bottom: 10px;
     }
 
     .brand-title,
     .contributors-title {
         font-size: 1.8rem;
-        /* Reduce title size on mobile */
     }
 
     .brand-description {
         font-size: 0.95rem;
-        /* Adjust message size on mobile */
         max-width: 90%;
-        /* Limit width for text on mobile */
     }
 
     .founder-title {
         font-size: 1.5rem;
-        /* Increase title size on mobile */
     }
 
     .founder-message {
         font-size: 0.9rem;
-        /* Adjust message size on mobile */
     }
 
     .about {
         padding: 20px;
-        /* Adjust padding for smaller screens */
     }
 }

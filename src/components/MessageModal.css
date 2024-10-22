@@ -4,67 +4,183 @@
     left: 0;
     right: 0;
     bottom: 0;
-    background-color: rgba(0, 0, 0, 0.5);
+    background-color: rgba(0, 0, 0, 0.6);
+    /* Dark overlay for better focus on modal */
     display: flex;
     justify-content: center;
     align-items: center;
     z-index: 1000;
+    /* Ensure it stays on top */
 }
 
 .modal-content {
-    background-color: white;
-    border-radius: 10px;
-    padding: 10px 60px;
-    max-width: 300px;
-    width: 100%;
-    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+    background-color: rgba(30, 30, 30, 0.8);
+    /* Darker transparent background for the modal */
+    border-radius: 15px;
+    /* Rounded corners */
+    padding: 40px;
+    /* Padding around content */
+    width: 90%;
+    max-width: 600px;
+    /* Maximum width for the modal */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+    /* Shadow effect for depth */
+    color: white;
+    /* White text color */
+    text-align: center;
+    /* Center text inside the modal */
     position: relative;
+    /* Ensure proper positioning for the close button */
 }
 
 .close-button {
     position: absolute;
-    top: 10px;
-    right: 10px;
-    font-size: 1.5rem;
+    /* Position it absolutely within the modal */
+    top: 15px;
+    /* Adjust to create space from the top */
+    right: 15px;
+    /* Adjust to create space from the right */
+    background: transparent;
+    /* No background for the button */
     border: none;
-    background: none;
+    /* No border for the button */
+    color: white;
+    /* White color for the close button */
+    font-size: 1.5rem;
+    /* Size of the close button */
     cursor: pointer;
+    /* Pointer cursor on hover */
 }
 
-.modal-content h1 {
-    text-align: center;
-    color: #3f2b2b;
-}
-
-.modal-content label {
-    display: block;
-    margin-bottom: 10px;
-}
-
-.modal-content input,
-.modal-content textarea {
-    width: 100%;
-    padding: 10px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
+.modal-title {
+    font-size: 2rem;
+    /* Title size */
     margin-bottom: 20px;
+    /* Space below the title */
 }
 
-.modal-content textarea {
-    height: 100px;
-    /* Adjust the height for the message box */
+.submission-message {
+    font-size: 1.5rem;
+    /* Size for the submission confirmation message */
+    margin-bottom: 20px;
+    /* Space below the message */
+}
+
+.message-form {
+    display: flex;
+    flex-direction: column;
+    /* Stack inputs vertically */
+    width: 100%;
+    /* Full width for the form */
+}
+
+.message-label {
+    display: flex;
+    /* Flex layout for labels */
+    flex-direction: column;
+    /* Stack label text and input */
+    margin-bottom: 20px;
+    /* Space below each label */
+}
+
+.message-label span {
+    font-size: 1rem;
+    /* Label text size */
+    color: #ffffff;
+    /* White color for labels */
+    margin-bottom: 5px;
+    /* Space below label text */
+}
+
+.message-input,
+.message-textarea {
+    padding: 10px;
+    /* Padding inside inputs */
+    border: none;
+    /* Remove border */
+    border-radius: 8px;
+    /* Rounded corners */
+    font-size: 1rem;
+    /* Font size for input text */
+    background-color: rgba(255, 255, 255, 0.2);
+    /* Darker transparent input background */
+    color: #ffffff;
+    /* White text color */
+    transition: background-color 0.3s;
+    /* Transition for focus effect */
+}
+
+.message-input:focus,
+.message-textarea:focus {
+    background-color: rgba(255, 255, 255, 0.3);
+    /* Darker background on focus for inputs */
+    outline: none;
+    /* Remove outline */
+    box-shadow: 0 0 5px rgba(255, 255, 255, 0.5);
+    /* Glow effect on focus */
+}
+
+.message-textarea {
+    min-height: 100px;
+    /* Minimum height for the textarea */
 }
 
 .send-button {
-    background-color: #4CAF50;
-    color: white;
-    padding: 10px;
+    padding: 12px;
+    /* Padding inside the button */
+    background-color: rgba(108, 99, 255, 0.8);
+    /* Button color with transparency */
+    color: #ffffff;
+    /* White text color for the button */
     border: none;
-    border-radius: 5px;
+    /* Remove border */
+    border-radius: 8px;
+    /* Rounded corners for button */
+    font-size: 1.2rem;
+    /* Font size for button text */
     cursor: pointer;
-    width: 100%;
+    /* Pointer cursor on hover */
+    transition: background-color 0.3s;
+    /* Transition for hover effect */
 }
 
 .send-button:hover {
-    background-color: #45a049;
+    background-color: rgba(92, 75, 204, 0.9);
+    /* Darker shade on hover */
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .modal-content {
+        padding: 20px;
+        /* Reduced padding for smaller screens */
+        width: 90%;
+        /* Keep width responsive */
+    }
+
+    .modal-title {
+        font-size: 1.5rem;
+        /* Smaller title size on mobile */
+    }
+
+    .submission-message {
+        font-size: 1.2rem;
+        /* Smaller submission message size */
+    }
+
+    .message-label span {
+        font-size: 0.9rem;
+        /* Smaller label text size on mobile */
+    }
+
+    .message-input,
+    .message-textarea {
+        font-size: 0.9rem;
+        /* Smaller input text size */
+    }
+
+    .send-button {
+        font-size: 1rem;
+        /* Smaller button text size */
+    }
 }

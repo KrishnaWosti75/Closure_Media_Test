@@ -4,8 +4,8 @@
     align-items: center;
     padding: 10px 0;
     /* Adjusted padding for spacing */
-    background-color: black;
-    /* Keep background transparent */
+    background-color: transparent;
+    /* Set background to transparent */
     position: relative;
     /* Change from fixed to relative */
     width: 100%;
@@ -13,6 +13,10 @@
     z-index: 1000;
     /* Ensure it is above other content */
 }
+
+/* The rest of your CSS remains the same */
+
+
 
 .navbar .logo {
     font-size: 2rem;

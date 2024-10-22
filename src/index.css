@@ -4,6 +4,7 @@ body {
   /* Ensure full height */
   margin: 0;
   /* Remove default margin */
+  background-image: './assets/background.jpg';
 }
 
 .app-container {
