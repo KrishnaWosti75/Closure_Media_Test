@@ -14,10 +14,18 @@ body {
   /* Minimum height of the app should be full viewport */
 }
 
+.navbar {
+  position: relative;
+  background-color: black;
+  padding-bottom: 0px;
+  padding-top: 0px;
+}
+
 .footer {
   margin-top: auto;
   /* Push footer to the bottom */
-  padding: 20px;
+  padding-bottom: 20px;
+  padding-top: 15px;
   background-color: rgba(0, 0, 0, 0.8);
   /* Example footer styling */
   color: white;

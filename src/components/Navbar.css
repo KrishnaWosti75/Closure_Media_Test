@@ -6,7 +6,7 @@
     /* Adjusted padding for spacing */
     background-color: transparent;
     /* Set background to transparent */
-    position: relative;
+    position: fixed;
     /* Change from fixed to relative */
     width: 100%;
     /* Ensure it spans the full width */
